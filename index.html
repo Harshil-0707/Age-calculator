@@ -15,21 +15,25 @@
 
   <body>
     <div id="container">
-      <img src="./assets/images/icon-arrow.svg" alt="icon" />
+      <img
+        src="./assets/images/icon-arrow.svg"
+        alt="icon"
+        onclick="computeAge()"
+      />
       <div id="input">
         <div id="day" class="inDate">
           <div>DAY</div>
-          <input type="text" name="day" id="day" placeholder="DD" />
+          <input type="text" name="day" id="inputDay" placeholder="DD" />
           <div class="errorMsg"></div>
         </div>
         <div id="month" class="inDate">
           <div>MONTH</div>
-          <input type="text" name="month" id="month" placeholder="MM" />
+          <input type="text" name="month" id="inputMonth" placeholder="MM" />
           <div class="errorMsg"></div>
         </div>
         <div id="year" class="inDate">
           <div>YEAR</div>
-          <input type="text" name="year" id="year" placeholder="YYYY" />
+          <input type="text" name="year" id="inputYear" placeholder="YYYY" />
           <div class="errorMsg"></div>
         </div>
       </div>

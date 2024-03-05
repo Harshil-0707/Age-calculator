@@ -88,17 +88,21 @@ body {
 }
 
 .error input {
-  border-color: var(--Light-red);
+  border-color: var(--Light-red) !important;
 }
 
 .errorMsg {
-  font-size: 14px;
+  margin-top: 6px;
+  font-weight: 200;
+  font-style: italic;
+  font-family: sans-serif;
   color: var(--Light-red);
+  font-size: 12px !important;
 }
 
 img {
-  top: 35%;
   right: 5%;
+  top: 30%;
   width: 4rem;
   height: 4rem;
   padding: 1rem;
@@ -116,9 +120,9 @@ img:hover {
   font-weight: 800;
   line-height: 5rem;
   font-style: italic;
-  line-height: 3.5rem;
+  line-height: 4.5rem;
   color: var(--Off-black);
-  font-size: min(2.9rem, 16dvw);
+  font-size: max(2.9rem, 4dvw);
 }
 
 span {
@@ -130,7 +134,6 @@ span {
     border-radius: 20px 20px 7rem 20px;
   }
   img {
-    top: 32%;
     right: 40%;
   }
   #input {
