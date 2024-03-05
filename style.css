@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  /* Primary color */
+
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+
+  /* Neutral color */
+
+  --White: hsl(0, 0%, 100%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+
+  /* font-family */
+  --Poppins: "Poppins";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: var(--Poppins);
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Off-white);
+}
+
+#container {
+  padding: 2rem;
+  width: min(88%, 50rem);
+  background-color: var(--White);
+  border-radius: 20px 20px 10rem 20px;
+}
+
+#input {
+  gap: 0;
+  display: flex;
+  position: relative;
+  margin-block: 0 1rem;
+  padding-block: 0 2rem;
+  border-bottom: 1px solid var(--Light-grey);
+}
+
+.inDate {
+  width: max(30%, 12rem);
+}
+
+.inDate div {
+  font-size: 16px;
+  color: var(--Smokey-grey);
+}
+
+.error div {
+  color: var(--Light-red);
+}
+
+.inDate input {
+  width: 80%;
+  padding: 1rem;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 2px solid var(--Light-grey);
+}
+
+.inDate input,
+.inDate input::placeholder {
+  font-size: 2dvw;
+  font-weight: 700;
+  color: var(--Smokey-grey);
+}
+
+.inDate input:hover,
+.inDate input:focus {
+  color: var(--Off-black);
+  caret-color: var(--Purple);
+  border-color: var(--Purple);
+}
+
+.error input {
+  border-color: var(--Light-red);
+}
+
+.errorMsg {
+  font-size: 14px;
+  color: var(--Light-red);
+}
+
+img {
+  top: 75%;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 100%;
+  background-color: var(--Purple);
+}
+
+img:hover {
+  background-color: var(--Off-black);
+}
+
+.outDate {
+  height: 8dvw;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--Off-black);
+  font-size: min(6rem, 7dvw);
+}
+
+span {
+  color: var(--Purple);
+}
+
+@media (max-width: 845px) {
+  #input {
+    margin-bottom: 3rem;
+    padding-bottom: 3.5rem;
+  }
+}
