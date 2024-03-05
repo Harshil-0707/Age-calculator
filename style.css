@@ -27,8 +27,8 @@
 }
 
 body {
-  height: 100dvh;
   display: flex;
+  height: 100dvh;
   align-items: center;
   justify-content: center;
   background-color: var(--Off-white);
@@ -36,22 +36,23 @@ body {
 
 #container {
   padding: 2rem;
-  width: min(88%, 50rem);
+  position: relative;
+  width: min(90%, 32rem);
   background-color: var(--White);
   border-radius: 20px 20px 10rem 20px;
 }
 
 #input {
-  gap: 0;
   display: flex;
-  position: relative;
-  margin-block: 0 1rem;
-  padding-block: 0 2rem;
+  margin-block: 0 1.6rem;
+  padding-block: 0 2.9rem;
   border-bottom: 1px solid var(--Light-grey);
 }
 
-.inDate {
-  width: max(30%, 12rem);
+@media (min-width: 845px) {
+  .inDate {
+    width: max(25%, 5rem);
+  }
 }
 
 .inDate div {
@@ -64,18 +65,19 @@ body {
 }
 
 .inDate input {
-  width: 80%;
-  padding: 1rem;
+  width: 90%;
   margin-top: 10px;
   border-radius: 6px;
+  padding: 0.5rem 1rem;
   border: 2px solid var(--Light-grey);
 }
 
 .inDate input,
 .inDate input::placeholder {
-  font-size: 2dvw;
+  /* font-size: 16px; */
   font-weight: 700;
   color: var(--Smokey-grey);
+  font-size: max(16px, 1.5dvw);
 }
 
 .inDate input:hover,
@@ -95,8 +97,8 @@ body {
 }
 
 img {
-  top: 75%;
-  right: 0;
+  top: 35%;
+  right: 5%;
   width: 4rem;
   height: 4rem;
   padding: 1rem;
@@ -111,11 +113,12 @@ img:hover {
 }
 
 .outDate {
-  height: 8dvw;
   font-weight: 800;
+  line-height: 5rem;
   font-style: italic;
+  line-height: 3.5rem;
   color: var(--Off-black);
-  font-size: min(6rem, 7dvw);
+  font-size: min(2.9rem, 16dvw);
 }
 
 span {
@@ -123,6 +126,13 @@ span {
 }
 
 @media (max-width: 845px) {
+  #container {
+    border-radius: 20px 20px 7rem 20px;
+  }
+  img {
+    top: 32%;
+    right: 40%;
+  }
   #input {
     margin-bottom: 3rem;
     padding-bottom: 3.5rem;
