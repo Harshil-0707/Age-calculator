@@ -43,6 +43,7 @@ body {
 }
 
 #input {
+  width: 100%;
   display: flex;
   margin-block: 0 1.6rem;
   padding-block: 0 2.9rem;
@@ -51,12 +52,12 @@ body {
 
 @media (min-width: 845px) {
   .inDate {
-    width: max(25%, 5rem);
+    width: max(25%, 8rem);
   }
 }
 
 .inDate div {
-  font-size: 15px;
+  font-size: 12px;
   color: var(--Smokey-grey);
 }
 
@@ -69,6 +70,7 @@ body {
   margin-top: 10px;
   border-radius: 6px;
   padding: 0.5rem 1rem;
+  color: var(--Off-black) !important;
   border: 2px solid var(--Light-grey);
 }
 
@@ -81,7 +83,6 @@ body {
 
 .inDate input:hover,
 .inDate input:focus {
-  color: var(--Off-black);
   caret-color: var(--Purple);
   border-color: var(--Purple);
 }
