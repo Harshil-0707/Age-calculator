@@ -3,25 +3,22 @@ function computeAge() {
   const month = document.getElementById("inputMonth");
   const year = document.getElementById("inputYear");
 
-  if (!day.value) {
-    day.parentElement.classList.add('error');
-    day.nextElementSibling.innerHTML = "This field is required";
-  } else {
-      day.nextElementSibling.innerHTML = "";
-    day.parentElement.classList.remove('error');
-  }
-  if (!month.value) {
-    month.parentElement.classList.add('error');
-    month.nextElementSibling.innerHTML = "This field is required";
-  } else {
-      month.nextElementSibling.innerHTML = "";
-    month.parentElement.classList.remove('error');
-  }
-  if (!year.value) {
-    year.parentElement.classList.add('error');
-    year.nextElementSibling.innerHTML = "This field is required";
-  } else {
-      year.nextElementSibling.innerHTML = "";
-      year.parentElement.classList.remove('error');
-  }
+  day.value ? hideError(day) : showError(day);
+  month.value ? hideError(month) : showError(month);
+  year.value ? hideError(year) : showError(year);
+  
+  let date = new Date();
+  let fullDay = date.getDay();
+  let fullMonth = date.getMonth();
+  let fullYear = date.getFullYear();
+}
+
+const showError = (getDate) => {
+  getDate.parentElement.classList.add("error");
+  getDate.nextElementSibling.innerHTML = "This field is required";
+}
+
+const hideError = (getDate) => {
+  getDate.nextElementSibling.innerHTML = "";
+  getDate.parentElement.classList.remove("error");
 }
